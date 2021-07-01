@@ -1,0 +1,34 @@
+<div class="row header-submenu-row">
+  <div class="header-submenu-column header-submenu-column--border">
+    <p class="header-submenu-title">Тип ухода</p>
+    <ul class="header-submenu-list">
+      {% set subSetsType = [['Расходные материалы'], ['Спецодежда'], ['Оборудование'], ['Дезинфекция'], ['Рекламная продукция']] %}
+      {% for item in subSetsType %}
+        <li>
+          <a href="#" class="header-submenu-list-item">{{item}}</a>
+        </li>
+      {% endfor %}
+      <li class="header-submenu-list-item--bottom">
+        <a href="#" class="header-submenu-list-item">Все акссессуары</a>
+      </li>
+    </ul>
+  </div>
+  <div class="header-submenu-tab-wrapper show">
+    <div class="header-submenu-column">
+      <p class="header-submenu-title">Специалист</p>
+      <ul class="header-submenu-list">
+        {% set subSetsType = [['Косметолог'], ['Маникюрист'], ['Подолог'], ['Массажист']] %}
+        {% for item in subSetsType %}
+          <li>
+            <a href="#" class="header-submenu-list-item">{{item}}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <img src="./images/dest/img/banner_product.png" alt="Продукция" class="header-submenu-banner-face">
+</div>
+<div class="header-submenu-btn-wrapper">
+  <a href="#" class="btn btn-main btn--header-submenu">в каталог</a>
+</div>

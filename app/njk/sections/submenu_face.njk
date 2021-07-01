@@ -1,0 +1,117 @@
+<div class="row header-submenu-row">
+  <div class="header-submenu-column header-submenu-column--border">
+    <p class="header-submenu-title">Место применения</p>
+    <ul class="header-submenu-list">
+      <li>
+        <label>
+          <input type="radio" name="faceSubmenu" class="header-submenu-tab-input" checked="checked" onchange="onShowMenuTab(this, 'subMenuFaceSalon')">
+          <span class="header-submenu-list-item">Салон</span>
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="radio" name="faceSubmenu" class="header-submenu-tab-input" onchange="onShowMenuTab(this, 'subMenuFaceHome')">
+          <span class="header-submenu-list-item">Дом</span>
+        </label>
+      </li>
+      <li>
+        <img src="./images/dest/img/DSC_6363.png" alt="Продукция" class="header-submenu-list-img-product">
+      </li>
+      <li>
+        <a href="#" class="header-submenu-list-item">Все продукты для лица</a>
+      </li>
+    </ul>
+  </div>
+  <div class="header-submenu-tab-wrapper show" data-tab-name="faceSubmenu" id="subMenuFaceSalon">
+    <div class="header-submenu-column header-submenu-column--border">
+      <p class="header-submenu-title">Тип ухода</p>
+      <ul class="header-submenu-list">
+        {% set subFaceType = [
+          ['Очищение'],
+          ['Тонизирование'],
+          ['Кремы'],
+          ['Маски'],
+          ['Альгинатные маски'],
+          ['Пилинги/Эксфолианты'],
+          ['Уход за контуром глаз'],
+          ['Бальзамы для губ']
+        ] %}
+        {% for item in subFaceType %}
+          <li>
+            <a href="#" class="header-submenu-list-item">{{item}}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="header-submenu-column header-submenu-column--border">
+      <p class="header-submenu-title">Потребности</p>
+      <ul class="header-submenu-list">
+        {% set subFaceType = [
+          ['Увлажнение'],
+          ['Восстановление и питание'],
+          ['Сияние'],
+          ['Антивозрастной уход'],
+          ['Первые признаки старения'],
+          ['Лифтинг и упругость'],
+          ['Коррекция несовершенств'],
+          ['Сокращение пигментации/Осветление тона'],
+          ['Отшелушивание/Эксфолиация']
+        ] %}
+        {% for item in subFaceType %}
+          <li>
+            <a href="#" class="header-submenu-list-item">{{item}}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <div class="header-submenu-tab-wrapper" data-tab-name="faceSubmenu" id="subMenuFaceHome">
+    <div class="header-submenu-column header-submenu-column--border">
+      <p class="header-submenu-title">Тип ухода</p>
+      <ul class="header-submenu-list">
+        {% set subFaceType = [
+          ['Очищение'],
+          ['Тонизирование'],
+          ['Кремы'],
+          ['Маски'],
+          ['Альгинатные маски'],
+          ['Пилинги/Эксфолианты'],
+          ['Уход за контуром глаз'],
+          ['Бальзамы для губ']
+        ] %}
+        {% for item in subFaceType %}
+          <li>
+            <a href="#" class="header-submenu-list-item">{{item}}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="header-submenu-column header-submenu-column--border">
+      <p class="header-submenu-title">Потребности</p>
+      <ul class="header-submenu-list">
+        {% set subFaceType = [
+          ['Увлажнение'],
+          ['Восстановление и питание'],
+          ['Сияние'],
+          ['Антивозрастной уход'],
+          ['Первые признаки старения'],
+          ['Лифтинг и упругость'],
+          ['Коррекция несовершенств'],
+          ['Сокращение пигментации/Осветление тона'],
+          ['Отшелушивание/Эксфолиация']
+        ] %}
+        {% for item in subFaceType %}
+          <li>
+            <a href="#" class="header-submenu-list-item">{{item}}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <img src="./images/dest/img/banner_product.png" alt="Продукция" class="header-submenu-banner-face">
+</div>
+<div class="header-submenu-btn-wrapper">
+  <a href="#" class="btn btn-main btn--header-submenu">в каталог</a>
+</div>

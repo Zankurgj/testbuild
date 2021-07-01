@@ -1,0 +1,68 @@
+<div class="main-social-slider-wrapper">
+  <button class="slider-arrow slider-arrow--prew slider-arrow--social-prew">
+    <span class="visually-hidden">Назад</span>
+  </button>
+  <button class="slider-arrow slider-arrow--next slider-arrow--social-next">
+    <span class="visually-hidden">Вперед</span>
+  </button>
+  <div class="main-social-slider" id="socialSlider">
+    {% for i in range(0, 3) %}
+      <div class="slide-social">
+        <div class="main-social-inner row row--wrapp">
+          <div class="main-social-col main-social--col2">
+            <div class="main-social-col main-social--col2">
+              <div class="main-social-item" style="background-image: url('/images/dest/img/social1.png');">
+                <div class="main-social-item-like main-social-item-like--bottom">
+                  <span>1542</span>
+                  <img class="main-social-item-like-icon" src="./images/dest/icons/heart-small.png" alt="Лайк">
+                </div>
+              </div>
+            </div>
+            <div class="main-social-col main-social--col2">
+              <div class="main-social-item">
+                <div class="main-social-item-inner">
+                  <img class="main-social-item-icon" src="./images/dest/icons/inst.png" alt="Иконка инстаграм">
+                  <p class="main-social-item-text">
+                    делись отзывами
+                    <br>
+                    на любимые средства</p>
+                  <p class="main-social-item-tag">#явыбираюaravia</p>
+                </div>
+              </div>
+            </div>
+            <div class="main-social-col main-social--col2">
+              <div class="main-social-item">
+                <div class="main-social-item-inner">
+                  <p class="main-social-item-text">
+                    читай отзывы
+                    <br>
+                    блогеров
+                  </p>
+                  <p class="main-social-item-tag">#araviaprofessional</p>
+                </div>
+              </div>
+            </div>
+            <div class="main-social-col main-social--col2">
+              <div class="main-social-item" style="background-image: url('/images/dest/img/social2.png');">
+                <div class="main-social-item-like main-social-item-like--bottom">
+                  <span>1542</span>
+                  <img class="main-social-item-like-icon" src="./images/dest/icons/heart-small.png" alt="Лайк">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main-social-col main-social--col2">
+            <div class="main-social-col main-social--col1">
+              <div class="main-social-item" style="background-image: url('/images/dest/img/social3.png');">
+                <div class="main-social-item-like main-social-item-like--top">
+                  <span>1542</span>
+                  <img class="main-social-item-like-icon" src="./images/dest/icons/heart-small.png" alt="Лайк">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

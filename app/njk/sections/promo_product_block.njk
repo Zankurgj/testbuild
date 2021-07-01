@@ -1,0 +1,72 @@
+<div class="main-product-nav">
+  {% set productNavItem = [['Хиты продаж', '#productTab1'],['Новинки', '#productTab2'], ['специальные цены', '#productTab3']]%}
+  {% for item, tabId in productNavItem %}
+    <label class="main-product-nav-item">
+      {% if loop.index === 1 %}
+        <input type="radio" name="product-nav" checked="checked" onchange="onShowTab(this , '{{tabId}}')">
+      {% else %}
+        <input type="radio" name="product-nav" onchange="onShowTab(this , '{{tabId}}')">
+      {% endif %}
+      <span class="main-product-nav-text">{{item}}</span>
+    </label>
+  {% endfor %}
+</div>
+<div class="main-product-tabs">
+  <div class="main-product-tab tab-item tab-item--show" id="productTab1" data-tab-name="product-nav">
+
+    <article class="slider-product-wrapper">
+      <button class="slider-arrow slider-arrow--pd slider-arrow--prew slider-arrow--product-prew">
+        <span class="visually-hidden">Назад</span>
+      </button>
+
+      <div class="slider-product" id="productSlider">
+        {% for i in range(0, 7) %}
+          <div class="slider-product-slide-wrapper">
+            {% from "app/njk/macro.njk" import productCard %}
+            {{ productCard(true,'./images/dest/img/sliderProduct.png', 'hit') }}
+          </div>
+        {% endfor %}
+      </div>
+      <button class="slider-arrow slider-arrow--pd slider-arrow--next slider-arrow--product-next">
+        <span class="visually-hidden">Вперед</span>
+      </button>
+    </article>
+
+  </div>
+  <div class="main-product-tab tab-item" id="productTab2" data-tab-name="product-nav">
+    <article class="slider-product-wrapper">
+      <button class="slider-arrow slider-arrow--pd slider-arrow--prew slider-arrow--product-new-prew">
+        <span class="visually-hidden">Назад</span>
+      </button>
+      <div class="slider-product" id="productSliderNew">
+        {% for i in range(0, 7) %}
+          <div class="slider-product-slide-wrapper">
+            {% from "app/njk/macro.njk" import productCard %}
+            {{ productCard(true, './images/dest/img/product2.png', 'new') }}
+          </div>
+        {% endfor %}
+      </div>
+      <button class="slider-arrow slider-arrow--pd slider-arrow--next slider-arrow--product-new-next">
+        <span class="visually-hidden">Вперед</span>
+      </button>
+    </article>
+  </div>
+  <div class="main-product-tab tab-item" id="productTab3" data-tab-name="product-nav">
+    <article class="slider-product-wrapper">
+      <button class="slider-arrow slider-arrow--pd slider-arrow--prew slider-arrow--product-special-prew">
+        <span class="visually-hidden">Назад</span>
+      </button>
+      <div class="slider-product" id="productSliderSpecial">
+        {% for i in range(0, 7) %}
+          <div class="slider-product-slide-wrapper">
+            {% from "app/njk/macro.njk" import productCard %}
+            {{ productCard(true, './images/dest/img/product3.png') }}
+          </div>
+        {% endfor %}
+      </div>
+      <button class="slider-arrow slider-arrow--pd slider-arrow--next slider-arrow--product-special-next">
+        <span class="visually-hidden">Вперед</span>
+      </button>
+    </article>
+  </div>
+</div>

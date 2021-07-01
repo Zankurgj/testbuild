@@ -1,0 +1,52 @@
+<div class="row header-submenu-row">
+  <div class="header-submenu-column header-submenu-column--border">
+    <p class="header-submenu-title">Место применения</p>
+    <ul class="header-submenu-list">
+      <li>
+        <img src="./images/dest/img/DSC_6352.png" alt="Продукция" class="header-submenu-list-img-product">
+      </li>
+      <li class="header-submenu-list-item--bottom">
+        <a href="#" class="header-submenu-list-item">Все продукты для депиляции</a>
+      </li>
+    </ul>
+  </div>
+  <div class="header-submenu-tab-wrapper show">
+    <div class="header-submenu-column header-submenu-column--border">
+      <p class="header-submenu-title">Тип ухода</p>
+      <ul class="header-submenu-list">
+        {% set subDepilationType = [
+          ['Пасты для шугаринга и карамели'],
+          ['Суперпластичные пасты'],
+          ['Полимерные воски'],
+          ['Косметика для шугаринга '],
+          ['Косметика для ваксинга'],
+          ['Коррекция вросших волос'],
+          ['Безболезненная депиляция'],
+          ['Уход за чувствительной кожей'],
+          ['Домашний уход']
+        ] %}
+        {% for item in subDepilationType %}
+          <li>
+            <a href="#" class="header-submenu-list-item">{{item}}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="header-submenu-column header-submenu-column--border">
+      <p class="header-submenu-title">Потребности</p>
+      <ul class="header-submenu-list">
+        {% set subDepilationType = [['Снятие покраснений'], ['Профилактика вросших волос'], ['Продление эффекта депиляции']] %}
+        {% for item in subDepilationType %}
+          <li>
+            <a href="#" class="header-submenu-list-item">{{item}}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <img src="./images/dest/img/banner_product.png" alt="Продукция" class="header-submenu-banner-face">
+</div>
+<div class="header-submenu-btn-wrapper">
+  <a href="#" class="btn btn-main btn--header-submenu">в каталог</a>
+</div>

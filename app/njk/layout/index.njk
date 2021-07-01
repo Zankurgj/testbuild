@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  {% if not(pageTitle) %}
+  {% set pageTitle = "iVideon" %}
+  {% endif %}
+  <title>{{ pageTitle }}</title>
+  <meta name="viewport" content="width=device-width" />
+  <!-- <link rel="icon" href="img/favicon.png" /> -->
+  <link rel="stylesheet" href="../../css/app.min.css" />
+</head>
+
+<body>
+  <div class="page">
+    <!-- Импортируем переменные с текстом -->
+    {% import '../var/var.njk' as globals %}
+    {% block content %}
+    {% endblock %}
+  </div>
+  <script src="../../js/app.min.js"></script>
+</body>
+
+</html>

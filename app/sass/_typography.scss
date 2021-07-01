@@ -1,0 +1,79 @@
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 0;
+  font-family: $mainfamily;
+}
+.h1-base {
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: rem(24);
+  .h1-base-text-underline {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 110%;
+      max-width: 360px;
+      height: 2px;
+      background-color: #592c82;
+    }
+  }
+  .h1-base-text-underline--right::after {
+    left: 0;
+    transform: translateX(0);
+  }
+}
+.h2-base {
+  font-size: rem(24);
+  color: #272727;
+  text-transform: uppercase;
+}
+.h1-promo-title-big {
+  position: relative;
+  text-align: center;
+  font-weight: normal;
+  font-size: 48px;
+  text-transform: uppercase;
+  color: #272727;
+  padding: 36px 0 34px 0;
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110%;
+    max-width: 360px;
+    height: 2px;
+    background-color: #592c82;
+  }
+  &::after {
+    bottom: 0;
+  }
+  &::before {
+    top: 0;
+  }
+}
+p {
+  margin: 0;
+}
+label {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  transition: color $base-duration $base-timing;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}

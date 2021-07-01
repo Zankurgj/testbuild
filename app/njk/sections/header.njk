@@ -1,0 +1,161 @@
+<div class="main-header-wrapper">
+  <div class="main-header-feature">
+    <div class="container">
+      <p class="main-header-feature-text">Бесплатная доставка по всей россии</p>
+    </div>
+  </div>
+  <header class="main-header">
+    <div class="main-header-mobile container">
+      <div class="main-header-search-inner">
+        <button class="btn-close btn-close-search" onclick="onToggleSearch()">
+          <span class="visually-hidden">закрыть</span>
+        </button>
+        <input type="text" class="base-input base-input--header-search" id="search-input">
+      </div>
+
+      <button class="btn-hamburger main-header-hamburger" onclick="onShowMenu(this)">
+        <span class="btn-hamburger-icon"></span>
+        <span class="visually-hidden">меню</span>
+      </button>
+      <button class="main-header-mobile-search" onclick="onToggleSearch()">
+        <span class="visually-hidden">поиск</span>
+        <img src="./images/dest/icons/glass.png" alt="search" class="main-header-top-item-icon">
+      </button>
+      <a href="#" class="main-header-logo main-header-logo--mobile">
+        <span class="visually-hidden">Аравия</span>
+        <img src="./images/dest/icons/mainLogo.png" alt="logo" class="">
+      </a>
+      <button class="main-header-mobile-item">
+        <span class="visually-hidden">Войти или Зарегистрироваться</span>
+        <img src="./images/dest/icons/user.png" alt="user" class="main-header-top-item-icon">
+      </button>
+      <button class="main-header-bottom-btn main-header-bottom-btn--like main-header-mobile-item">
+        <span class="visually-hidden">Избранное</span>
+        <img src="./images/dest/icons/heart.png" alt="heart" class="main-header-bottom-item-icon">
+      </button>
+      <button class="main-header-bottom-btn main-header-bottom-btn--basket main-header-mobile-item">
+        <img src="./images/dest/icons/bag.png" alt="bag" class="main-header-bottom-item-icon">
+        <span class="main-header-bottom-btn-text">Корзина</span>
+      </button>
+    </div>
+    <div class="main-header--desc">
+      <div class="main-header-top-wrapper">
+        <ul class="main-header-top container">
+          <li class="main-header-top-item">
+            <button class="main-header-top-item-dropdown">Москва</button>
+          </li>
+          <li class="main-header-top-item">
+            <a href="#">Магазины</a>
+          </li>
+          <li class="main-header-top-item">
+            <span >
+              <a href="tel:+7(495)777-17-39">+7 (495)777-17-39</a>, пн-пт с 9:00 до 18:00</span></li>
+          <li class="main-header-top-item">
+            <a href="mailto:name@email.com">
+              Написать нам
+              <img src="./images/dest/icons/email.png" alt="mail" class="main-header-top-item-icon">
+            </a>
+          </li>
+          <li class="main-header-top-item main-header-top-item--desc">
+            <label>
+              <span class="visually-hidden">Поиск</span>
+              <input type="text" class="base-search-input">
+              <img src="./images/dest/icons/glass.png" alt="search" class="main-header-top-item-icon">
+            </label>
+          </li>
+          <li class="main-header-top-item main-header-top-item--desc">
+            <button>
+              Войти или Зарегистрироваться
+              <img src="./images/dest/icons/user.png" alt="user" class="main-header-top-item-icon">
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="main-header-bottom-wrapper">
+        <div class="main-header-bottom container">
+          <a href="#" class="main-header-logo">
+            <span class="visually-hidden">Аравия</span>
+            <img src="./images/dest/icons/mainLogo.png" alt="logo" class="">
+          </a>
+          <nav class="main-header-bottom-nav">
+            <div href="#" class="main-header-bottom-item active" onclick="onShowSubmenu(this)">
+              <a href="#">
+                Уход за лицом
+              </a>
+              <div class="main-header-submenu">
+                <button class="btn-main-header-submenu-back" onclick="onHideSubmenu()">
+                  <span>Назад</span>
+                </button>
+                {% include "./submenu_face.njk" %}
+              </div>
+            </div>
+            <div class="main-header-bottom-item" onclick="onShowSubmenu(this)">
+              <a href="#">Уход за телом</a>
+              <div class="main-header-submenu">
+                <button class="btn-main-header-submenu-back" onclick="onHideSubmenu()">
+                  <span>Назад</span>
+                </button>
+                {% include "./submenu_body.njk" %}
+              </div>
+            </div>
+            <div class="main-header-bottom-item" onclick="onShowSubmenu(this)">
+              <a href="#">депиляция</a>
+              <div class="main-header-submenu">
+                <button class="btn-main-header-submenu-back" onclick="onHideSubmenu()">
+                  <span>Назад</span>
+                </button>
+                {% include "./submenu_depilation.njk" %}
+              </div>
+            </div>
+            <div class="main-header-bottom-item" onclick="onShowSubmenu(this)">
+              <a href="#">Маникюр и педикюр</a>
+              <div class="main-header-submenu">
+                <button class="btn-main-header-submenu-back" onclick="onHideSubmenu()">
+                  <span>Назад</span>
+                </button>
+                {% include "./submenu_manicure.njk" %}
+              </div>
+            </div>
+            <div class="main-header-bottom-item" onclick="onShowSubmenu(this)">
+              <a href="#">наборы</a>
+              <div class="main-header-submenu">
+                <button class="btn-main-header-submenu-back" onclick="onHideSubmenu()">
+                  <span>Назад</span>
+                </button>
+                {% include "./submenu_sets.njk" %}
+              </div>
+            </div>
+            <div class="main-header-bottom-item" onclick="onShowSubmenu(this)">
+              <a href="#">Аксессуары</a>
+              <div class="main-header-submenu">
+                <button class="btn-main-header-submenu-back" onclick="onHideSubmenu()">
+                  <span>Назад</span>
+                </button>
+                {% include "./submenu_accessories.njk" %}
+              </div>
+            </div>
+            <div class="main-header-bottom-item" onclick="onShowSubmenu(this)">
+              <a href="#">Бренды</a>
+              <div class="main-header-submenu">
+                <button class="btn-main-header-submenu-back" onclick="onHideSubmenu()">
+                  <span>Назад</span>
+                </button>
+                {% include "./submenu_brands.njk" %}
+              </div>
+            </div>
+          </nav>
+          <div class="main-header-bottom-right">
+            <button class="main-header-bottom-btn main-header-bottom-btn--like">
+              <span class="visually-hidden">Избранное</span>
+              <img src="./images/dest/icons/heart.png" alt="heart" class="main-header-bottom-item-icon">
+            </button>
+            <button class="main-header-bottom-btn main-header-bottom-btn--basket">
+              <img src="./images/dest/icons/bag.png" alt="bag" class="main-header-bottom-item-icon">
+              <span class="main-header-bottom-btn-text">Корзина</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
